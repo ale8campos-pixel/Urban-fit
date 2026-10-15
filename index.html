@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URBAN FIT | Tienda de ropa</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">URBAN<span>FIT.</span></a>
+
+    <nav>
+      <a href="#inicio">inicio</a>
+      <a href="#catalogo">Colección</a>
+      <a href="#pedido">Realizar pedido</a>
+    </nav>
+
+    <a href="#carrito" class="cart-link">
+      Carrito (<span id="cart-count">0</span>)
+    </a>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div>
+        <p class="eyebrow">NUEVA COLECCIÓN</p>
+        <h1>VISTE A<br>TU MANERA.</h1>
+        <p>Encuentra prendas que reflejan tu personalidad.</p>
+        <a href="#catalogo" class="button">EXPLORAR COLECCIÓN</a>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalogo">
+      <p class="eyebrow">NUESTROS FAVORITOS</p>
+      <h2>Descubre tu estilo</h2>
+
+      <div id="products" class="product-grid"></div>
+    </section>
+
+    <section class="shopping" id="carrito">
+      <h2>Tu carrito</h2>
+      <div id="cart-items"></div>
+      <p>Subtotal: <strong id="subtotal">₡0</strong></p>
+      <p>Envío: <strong id="shipping">₡0</strong></p>
+      <h3>Total: <span id="total">₡0</span></h3>
+    </section>
+
+    <section class="checkout" id="pedido">
+      <h2>Finalizar pedido</h2>
+
+      <form id="order-form">
+        <label for="customer">Nombre completo</label>
+        <input id="customer" name="customer" required>
+
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="phone">Teléfono</label>
+        <input id="phone" name="phone" type="tel" required>
+
+        <label for="address">Dirección de entrega</label>
+        <textarea id="address" name="address" required></textarea>
+
+        <button class="button" type="submit">
+          CONFIRMAR PEDIDO
+        </button>
+
+        <p id="message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>URBAN FIT · Tu estilo. Tu ritmo. Tu identidad.</p>
+    <p>Tienda de demostración educativa.</p>
+  </footer>
+
+</body>
+</html>
